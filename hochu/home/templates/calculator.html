@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% csrf_token %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/styles.css"%}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Хочу навес</title>
+</head>
+<body>
+    <header>
+        <div class="header__container wrapper">
+            <a href={% url 'home:all' %} class="logo__link">
+                <div class="logo header__logo">Хочу навес</div>
+            </a>
+            <nav>
+                <a href={% url 'home:calc' %} class="nav__link">
+                    <div class="nav__option">Калькулятор</div>
+                </a>
+                <div class="dropdown">
+                    <button>Типы навесов</button>
+                    <div class="dropdown-content">
+                        <a href={% url 'home:polycarb' %}>Поликарбонат</a>
+                        <a href={% url 'home:metalprof' %}>Металлопрофиль</a>
+                        <a href={% url 'home:monolith' %}>Монолит</a>
+                        <a href={% url 'home:softroof' %}>Мягкая кровля</a>
+                        <a href={% url 'home:wood' %}>Дерево</a>
+                        <a href={% url 'home:profpipe' %}>Профильная труба</a>
+                        <a href={% url 'home:metaltile' %}>Металлочерепица</a>
+                        <a href={% url 'home:forg' %}>Ковка</a>
+                    </div>
+                </div>
+                <a href={% url 'home:cont' %} class="nav__link">
+                    <div class="nav__option">Контакты</div>
+                </a>
+                <a href={% url 'home:cert' %} class="nav__link">
+                    <div class="nav__option">Сертификация</div>
+                </a>
+            </nav>
+            <button href="#" class="burger__link">
+                <img src={% static "img/menu.svg" %} alt="menu" class="burger__icon">
+            </button>
+            <div class="menu">
+                    <button href="#" class="cross__link">
+                        <img src={% static "img/cross.svg" %} alt="cross" class="cross__icon">
+                    </button>
+                <div class="menu__container">
+                    <a href={% url 'home:all' %} class="logo__link">
+                        <div class="logo menu__logo">Хочу навес</div>
+                    </a>
+                    <li><a href={% url 'home:calc' %}>Калькулятор</a></li>
+                    <li><a href={% url 'home:cont' %}>Контакты</a></li>
+                    <li><a href={% url 'home:cert' %}>Сертификация</a></li>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <main class="calc__main wrapper">
+        <div class="container">
+            <h1>Калькулятор стоимости</h1>
+            <form class="calc__form" name="calc" onsubmit="return false;">
+                <div class="calc__block calc__flock">
+                    <div class="calc__container">
+                        <legend class="calc__legend type__farm"><h2>Тип фермы</h2></legend>
+                        <fieldset class="calc__type">
+                            <label class="calc__radio">
+                                <input type="radio" name="typeOfFerm" value="Арочный" checked required>
+                                <span>Арочный</span>
+                            </label>
+        
+                            <label class="calc__radio">
+                                <input type="radio" name="typeOfFerm" value="Односкатный">
+                                <span>Односкатный</span>
+                            </label>
+        
+                            <label class="calc__radio">
+                                <input type="radio" name="typeOfFerm" value="Полуарочный">
+                                <span>Полуарочный</span>
+                            </label>
+        
+                            <label class="calc__radio">
+                                <input type="radio" name="typeOfFerm" value="Другой">
+                                <span>Другой</span>
+                            </label>
+                        </fieldset>
+                    </div>
+    
+                    <div class="calc__container">
+                        <legend class="calc__legend"><h2>Обрешётка</h2></legend>
+    
+                        <fieldset class="calc__type">
+                            <label class="calc__radio">
+                                <input type="radio" name="crate" value="Вертикальная" checked required>
+                                <span>Вертикальная</span>
+                            </label>
+        
+                            <label class="calc__radio">
+                                <input type="radio" name="crate" value="Треугольная">
+                                <span>Треугольная</span>
+                            </label>
+        
+                            <label class="calc__radio">
+                                <input type="radio" name="crate" value="Усиленная">
+                                <span>Усиленная</span>
+                            </label>
+        
+                            <label class="calc__radio">
+                                <input type="radio" name="crate" value="Плоская">
+                                <span>Плоская</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="calc__block">
+                    <legend class="calc__legend"><h2>Размеры</h2></legend>
+
+                    <div class="calc__grid">
+                        <div class="calc__grid-item">
+                            <label for="width">Ширина навеса, м</label>
+                            <input class="calc__input input" id="widthOfCover" name="widthOfCover" type="number"
+                                placeholder="Введите значение.." step="0.1" min="2" max="10" tabindex="1" required>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="length">Длина навеса, м</label>
+                            <input class="calc__input input" id="lengthofCover" name="lengthOfCover" type="number"
+                                placeholder="Введите значение.." step="0.1" min="2" max="20" tabindex="3" required>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="length">Высота фермы, мм</label>
+                            <input class="calc__input input" id="heightOfFarms" name="heightOfFarms" type="number"
+                                placeholder="Введите значение.." step="1" min="200" max="2000" tabindex="3" required>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="length">Шаг лагов, мм</label>
+                            <input class="calc__input input" id="stepOfLags" name="stepOfLags" type="number"
+                                placeholder="Введите значение.." step="1" min="300" max="2000" tabindex="3" required>
+                        </div>
+                    </div>
+
+                    <div class="calc__grid">
+                        <div class="calc__grid-item">
+                            <label for="length">Высота столбов, м</label>
+                            <input class="calc__input input" id="heightOfBeams" name="heightOfBeams" type="number"
+                                placeholder="Введите значение.." step="0.1" min="2" max="3.5" tabindex="3" required>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="length">Выгнутость арки, м</label>
+                            <input class="calc__input input" id="convexityofArch" name="convexityofArch" type="number"
+                                placeholder="Введите значение.." step="0.01" min="0.15" max="0.5" tabindex="3" required>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="length">Шаг столбов, м</label>
+                            <input class="calc__input input" id="stepOfBeams" name="stepOfBeams" type="number"
+                                placeholder="Введите значение.." step="0.1" min="1" max="10" tabindex="3" required>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="length">Шаг ферм, мм</label>
+                            <input class="calc__input input" id="stepOfFarms" name="stepOfFarms" type="number"
+                                placeholder="Введите значение.." step="0.1" min="1" max="10" tabindex="3" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc__block">
+                    <legend class="calc__legend farm"><h2>Фермы и столбы</h2></legend>
+
+                    <div class="calc__grid">
+                        <div class="calc__grid-item">
+                            <label for="size">Толщина лагов</label>
+                            <select class="input" id="thicknessOfLags" name="thicknessOfLags" tabindex="5" required>
+                                <option value="">Выбрать</option>
+                                <option value="40*20*15">40 × 20 × 1.5 мм</option>
+                                <option value="40*20*2">40 × 20 × 2 мм</option>
+                                <option value="40*20*3">40 × 20 × 3 мм</option>
+                                <option value="40*40*15">40 × 40 × 1.5 мм</option>
+                                <option value="40*40*2">40 × 40 × 2 мм</option>
+                                <option value="40*40*3">40 × 40 × 3 мм</option>
+                                <option value="40*40*4">40 × 40 × 4 мм</option>
+                                <option value="60*40*3">60 × 40 × 3 мм</option>
+                                <option value="60*60*3">60 × 60 × 3 мм</option>
+                                <option value="80*40*2">80 × 40 × 2 мм</option>
+                                <option value="80*40*3">80 × 40 × 3 мм</option>
+                                <option value="80*60*3">80 × 60 × 4 мм</option>
+                                <option value="80*60*2">80 × 60 × 2 мм</option>
+                                <option value="80*60*3">80 × 60 × 3 мм</option>
+                                <option value="80*60*4">80 × 60 × 4 мм</option>
+                                <option value="80*60*3">80 × 80 × 2.5 мм</option>
+                                <option value="80*60*4">80 × 80 × 3 мм</option>
+                            </select>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="size">Толщина рёбер</label>
+                            <select class="input" id="thicknessOfEdges" name="thicknessOfEdges" tabindex="5" required>
+                                <option value="">Выбрать</option>
+                                <option value="40*20*15">40 × 20 × 1.5 мм</option>
+                                <option value="40*20*2">40 × 20 × 2 мм</option>
+                                <option value="40*20*3">40 × 20 × 3 мм</option>
+                                <option value="40*40*15">40 × 40 × 1.5 мм</option>
+                                <option value="40*40*2">40 × 40 × 2 мм</option>
+                                <option value="40*40*3">40 × 40 × 3 мм</option>
+                                <option value="40*40*4">40 × 40 × 4 мм</option>
+                                <option value="60*40*3">60 × 40 × 3 мм</option>
+                                <option value="60*60*3">60 × 60 × 3 мм</option>
+                                <option value="80*40*2">80 × 40 × 2 мм</option>
+                                <option value="80*40*3">80 × 40 × 3 мм</option>
+                                <option value="80*60*3">80 × 60 × 4 мм</option>
+                                <option value="80*60*2">80 × 60 × 2 мм</option>
+                                <option value="80*60*3">80 × 60 × 3 мм</option>
+                                <option value="80*60*4">80 × 60 × 4 мм</option>
+                                <option value="80*60*3">80 × 80 × 2.5 мм</option>
+                                <option value="80*60*4">80 × 80 × 3 мм</option>
+                            </select>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="size">Толщина рамы</label>
+                            <select class="input" id="thicknessOfFrame" name="thicknessOfFrame" tabindex="5" required>
+                                <option value="">Выбрать</option>
+                                <option value="40*20*15">40 × 20 × 1.5 мм</option>
+                                <option value="40*20*2">40 × 20 × 2 мм</option>
+                                <option value="40*20*3">40 × 20 × 3 мм</option>
+                                <option value="40*40*15">40 × 40 × 1.5 мм</option>
+                                <option value="40*40*2">40 × 40 × 2 мм</option>
+                                <option value="40*40*3">40 × 40 × 3 мм</option>
+                                <option value="40*40*4">40 × 40 × 4 мм</option>
+                                <option value="60*40*3">60 × 40 × 3 мм</option>
+                                <option value="60*60*3">60 × 60 × 3 мм</option>
+                                <option value="80*40*2">80 × 40 × 2 мм</option>
+                                <option value="80*40*3">80 × 40 × 3 мм</option>
+                                <option value="80*60*3">80 × 60 × 4 мм</option>
+                                <option value="80*60*2">80 × 60 × 2 мм</option>
+                                <option value="80*60*3">80 × 60 × 3 мм</option>
+                                <option value="80*60*4">80 × 60 × 4 мм</option>
+                                <option value="80*60*3">80 × 80 × 2.5 мм</option>
+                                <option value="80*60*4">80 × 80 × 3 мм</option>
+                            </select>
+                        </div>
+
+                        <div class="calc__grid-item">
+                            <label for="size">Размер столбов</label>
+                            <select class="input" id="sizeOfBeams" name="sizeOfBeams" tabindex="5" required>
+                                <option value="">Выбрать</option>
+                                <option value="60*60*3">60 × 60 × 3 мм</option>
+                                <option value="60*60*4">60 × 60 × 4 мм</option>
+                                <option value="80*80*25">80 × 80 × 2.5 мм</option>
+                                <option value="80*80*3">80 × 80 × 3 мм</option>
+                                <option value="80*80*4">80 × 80 × 4 мм</option>
+                                <option value="100*100*3">100 × 100 × 3 мм</option>
+                                <option value="100*100*4">100 × 100 × 4 мм</option>
+                                <option value="120*120*3">120 × 120 × 3 мм</option>
+                                <option value="120*120*4">120 × 120 × 4 мм</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="calc__beam">
+                        <input type="checkbox" name="reinforced" value="Усиленные основания">
+                        <label for="size">Усиленные основания</label>
+                    </div>
+                </div>
+
+                <div class="calc__block">
+                    <legend class="calc__legend"><h2>Крыша</h2></legend>
+
+                    <div class="calc__grid">
+                        <div class="calc__grid-three">
+                            <label for="color">Материал</label>
+                            <select class="input" id="material" name="material" tabindex="7" required>
+                                <option value="">Выбрать</option>
+                                <option value="hex">Сотовый поликарбонат</option>
+                                <option value="mono">Монолитный поликарбонат</option>
+                            </select>
+                        </div>
+
+                        <div class="calc__grid-three">
+                            <label for="carbon">Параметры</label>
+                            <select class="input" id="parameters" name="parameters" tabindex="6"
+                                required>
+                                <option value="">Выбрать</option>
+                                <option value="4*42">Стандарт 4мм, 4.2 кг/м²</option>
+                                <option value="4*48">Премиум 4мм, 4.8 кг/м²</option>
+                                <option value="6*66">Стандарт 6мм, 6.6 кг/м²</option>
+                                <option value="6*72">Премиум 6мм, 7.2 кг/м²</option>
+                            </select>
+                        </div>
+
+                        <div class="calc__grid-three">
+                            <label>Цвет</label>
+                            <select class="input" id="colorOfCover" for="id" name="colorOfCover" tabindex="8" required>
+                                <option value="">Выбрать</option>
+                                <option value="bronze">Бронза серый</option>
+                                <option value="brown">Коричневый</option>
+                                <option value="red">Красный</option>
+                                <option value="transparent">Прозрачный</option>
+                                <option value="white">Белый</option>
+                                <option value="turquoise">Бирюзовый</option>
+                                <option value="green">Зелёный</option>
+                                <option value="blue">Синий</option>
+                                <option value="yellow">Желтый</option>
+                                <option value="ember">Янтарный</option>
+                                <option value="emerald">Изумрудный</option>
+                                <option value="pomegranate">Гранатовый</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="calc__block">
+                    <legend class="calc__legend"><h2>Покраска и монтаж</h2></legend>
+                    <div class="calc__grid">
+                        <div class="calc__grid-three">
+                            <label for="color">Цвет конструкции</label>
+                            <select class="input" id="colorOfConstruction" name="colorOfConstruction" tabindex="7" required>
+                                <option value="">Выбрать</option>
+                                <option value="ral8017">Шоколадный (RAL 8017)</option>
+                                <option value="ral9005">Черный (RAL 9005)</option>
+                                <option value="ral7040">Серый (RAL 7040)</option>
+                                <option value="ral9010">Белый (RAL 9010)</option>
+                                <option value="ral1036">Золотистый (RAL 1036)</option>
+                                <option value="ral9006">Серебряный (RAL 9006)</option>
+                                <option value="ral1015">Слоновая кость (RAL 1015)</option>
+                                <option value="ral1021">Желтый (RAL 1021)</option>
+                                <option value="ral3000">Красный (RAL 3000)</option>
+                                <option value="ral3005">Вишневый (RAL 3005)</option>
+                                <option value="ral8011">Темно-коричневый (RAL 8011)</option>
+                                <option value="ral6005">Зеленый (RAL 6005)</option>
+                                <option value="ral5010">Синий (RAL 5010)</option>
+                            </select>
+                        </div>
+
+                        <div class="calc__grid-three">
+                            <label for="carbon">Краска</label>
+                            <select class="input" id="paint" name="paint" tabindex="6"
+                                required>
+                                <option value="">Выбрать</option>
+                                <option value="slaven">Грунт-эмаль Slaven 3 в 1</option>
+                                <option value="hammerite">Грунт-эмаль Hammerite Total</option>
+                            </select>
+                        </div>
+
+                        <div class="calc__grid-three">
+                            <label>Установка</label>
+                            <select class="input" id="setup" for="id" name="setup" tabindex="8" required>
+                                <option value="">Выбрать</option>
+                                <option value="concrete-ready">На бетонное основание</option>
+                                <option value="concrete-unready">Бетонирование столбов</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <input class="calc__submit" type="submit" value="РАССЧИТАТЬ СТОИМОСТЬ" tabindex="10">
+            </div>
+            </form>
+
+            <table class="calc__table">
+                <caption class="calc__caption"><h1>СМЕТА</h1></caption>
+                <thead class="calc__thead">
+                    <tr class="calc__tr">
+                        <th class="calc__th">№</th>
+                        <th class="calc__th">НАИМЕНОВНИЕ</th>
+                        <th class="calc__th">КОЛИЧЕСТВО</th>
+                    </tr>
+                </thead>
+                <tbody class="calc__tbody">
+                    <tr class="calc__tr">
+                        <td class="calc__td">1.</td>
+                        <td class="calc__td">Вид навеса</td>
+                        <td class="calc__td" id="typeOfFermTD">Арочный</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">2.</td>
+                        <td class="calc__td">Ширина по ригелю</td>
+                        <td class="calc__td" id="widthTD">4.5 м</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">3.</td>
+                        <td class="calc__td">Длина по ригелю</td>
+                        <td class="calc__td" id="lengthTD">6 м</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">4.</td>
+                        <td class="calc__td">Высота столбов</td>
+                        <td class="calc__td" id="heightTD">2.10 м</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">5.</td>
+                        <td class="calc__td">Высота арки</td>
+                        <td class="calc__td" id="heightArcTD">1.04 м</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">6.</td>
+                        <td class="calc__td">Толщина поликарбоната</td>
+                        <td class="calc__td" id="boldTD">10 мм</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">7.</td>
+                        <td class="calc__td">Плотность поликарбоната</td>
+                        <td class="calc__td" id="densityTD">1.1 кг/кв.м.</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">8.</td>
+                        <td class="calc__td">Цвет поликарбоната</td>
+                        <td class="calc__td" id="colorOfPolycarbonTD">Янтарь</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">9.</td>
+                        <td class="calc__td">Цвет каркаса</td>
+                        <td class="calc__td" id="colorFrameTD">Черный (RAL 90005)</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">10.</td>
+                        <td class="calc__td">Размер столбов</td>
+                        <td class="calc__td" id="sizeOfColumnTD">8х8 см</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">11.</td>
+                        <td class="calc__td">Столбы</td>
+                        <td class="calc__td" id="pillarTD">8 шт.</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">12.</td>
+                        <td class="calc__td">Продольные стяжки (лаги)</td>
+                        <td class="calc__td" id="lagTD">11 шт.</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">13.</td>
+                        <td class="calc__td">Ферма (двойные дуги)</td>
+                        <td class="calc__td" id="doubleArcTD">5 шт.</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">14.</td>
+                        <td class="calc__td">Горизонтальные опорные трубы</td>
+                        <td class="calc__td" id="horizontallPipeTD">2 шт.</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">15.</td>
+                        <td class="calc__td">Тип установки столбов</td>
+                        <td class="calc__td" id="setupTD">На бетонное основание</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">16.</td>
+                        <td class="calc__td">Погонаж ферм и лагов</td>
+                        <td class="calc__td" id="moldingFarmLugTD">166.55 м</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td">17.</td>
+                        <td class="calc__td">Погонаж опор и ригеля</td>
+                        <td class="calc__td" id="moldingSupportCrossbarTD">30.40 м</td>
+                    </tr>
+                </tbody>
+                <tfoot class="calc__tfoot">
+                    <tr class="calc__tr">
+                        <td class="calc__td calc__td--right" colspan="2">СТОИМОСТЬ</td>
+                        <td class="calc__td" id="priceTD">134 680 руб.</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td calc__td--right" colspan="2">СКИДКА 15%</td>
+                        <td class="calc__td" id="discountTD">-20 202 руб.</td>
+                    </tr>
+                    <tr class="calc__tr">
+                        <td class="calc__td calc__td--right" colspan="2">ИТОГО "ПОД КЛЮЧ"</td>
+                        <td class="calc__td" id="totalTD">114 478 руб.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer class="wrapper">
+        <a href={% url 'home:all' %} class="logo__link">
+            <div class="logo">Хочу навес</div>
+        </a>
+        <div class="types">
+            <div class="types__header">Типы навесов</div>
+            <ul class="types__content">
+                <li><a href={% url 'home:polycarb' %}>Поликарбонат</a></li>
+                <li><a href={% url 'home:metalprof' %}>Металлопрофиль</a></li>
+                <li><a href={% url 'home:monolith' %}>Монолит</a></li>
+                <li><a href={% url 'home:softroof' %}>Мягкая кровля</a></li>
+                <li><a href={% url 'home:wood' %}>Дерево</a></li>
+                <li><a href={% url 'home:profpipe' %}>Профильная труба</a></li>
+                <li><a href={% url 'home:metaltile' %}>Металлочерепица</a></li>
+                <li><a href={% url 'home:forg' %}>Ковка</a></li>
+                <li><a href={% url 'home:calc' %}>Калькулятор стоимости</a></li>
+            </ul>
+        </div>
+        <div class="types">
+            <div class="types__header">О нас</div>
+            <ul class="types__content">
+                <li><a href={% url 'home:cont' %}>Карточка предприятия</a></li>
+                <li><a href={% url 'home:cert' %}>Сертификация</a></li>
+                <li><a href={% url 'home:privpol' %}>Политика<br>конфиденциальности</a></li>
+            </ul>
+        </div>
+        <div class="types">
+            <div class="types__header">О нас</div>
+            <ul class="types__content">
+                <li>+7 (***) *** **-**</li>
+                <li>youremail@mail.ru</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src={% static "js/materials.js" %}></script>  
+    <script src={% static "js/menu.js" %}></script>
+    <script src={% static "js/call.js" %}></script>
+    <script src={% static "js/script.js"%}></script>
+</body>
+</html>

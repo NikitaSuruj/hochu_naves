@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% csrf_token %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/styles.css"%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Хочу навес</title>
+</head>
+<body>
+    <header>
+        <div class="header__container wrapper">
+            <a href={% url 'home:all' %} class="logo__link">
+                <div class="logo header__logo">Хочу навес</div>
+            </a>
+            <nav>
+                <a href={% url 'home:calc' %} class="nav__link">
+                    <div class="nav__option">Калькулятор</div>
+                </a>
+                <div class="dropdown">
+                    <button>Типы навесов</button>
+                    <div class="dropdown-content">
+                        <a href={% url 'home:polycarb' %}>Поликарбонат</a>
+                        <a href={% url 'home:metalprof' %}>Металлопрофиль</a>
+                        <a href={% url 'home:monolith' %}>Монолит</a>
+                        <a href={% url 'home:softroof' %}>Мягкая кровля</a>
+                        <a href={% url 'home:wood' %}>Дерево</a>
+                        <a href={% url 'home:profpipe' %}>Профильная труба</a>
+                        <a href={% url 'home:metaltile' %}>Металлочерепица</a>
+                        <a href={% url 'home:forg' %}>Ковка</a>
+                    </div>
+                </div>
+                <a href={% url 'home:cont' %} class="nav__link">
+                    <div class="nav__option">Контакты</div>
+                </a>
+                <a href={% url 'home:cert' %} class="nav__link">
+                    <div class="nav__option">Сертификация</div>
+                </a>
+            </nav>
+            <button href="#" class="burger__link">
+                <img src={% static "img/menu.svg" %} alt="menu" class="burger__icon">
+            </button>
+            <div class="menu">
+                    <button href="#" class="cross__link">
+                        <img src={% static "img/cross.svg" %} alt="cross" class="cross__icon">
+                    </button>
+                <div class="menu__container">
+                    <a href={% url 'home:all' %} class="logo__link">
+                        <div class="logo menu__logo">Хочу навес</div>
+                    </a>
+                    <li><a href={% url 'home:calc' %}>Калькулятор</a></li>
+                    <li><a href={% url 'home:cont' %}>Контакты</a></li>
+                    <li><a href={% url 'home:cert' %}>Сертификация</a></li>
+                    <li>Типы навесов
+                        <div class="dropdown-content">
+                            <a href={% url 'home:polycarb' %}>Поликарбонат</a>
+                            <a href={% url 'home:metalprof' %}>Металлопрофиль</a>
+                            <a href={% url 'home:monolith' %}>Монолит</a>
+                            <a href={% url 'home:softroof' %}>Мягкая кровля</a>
+                            <a href={% url 'home:wood' %}>Дерево</a>
+                            <a href={% url 'home:profpipe' %}>Профильная труба</a>
+                            <a href={% url 'home:metaltile' %}>Металлочерепица</a>
+                            <a href={% url 'home:forg' %}>Ковка</a>
+                        </div>
+                    </li>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <div class="specialist__form__container">
+        <div class="specialist__form__padding">
+            <div class="specialist__form">
+                <button href="#" class="cross__link__second">
+                    <img src={% static "img/cross.svg" %} alt="cross" class="cross__icon">
+                </button>
+                <form action='#portal' method='post' id='upload_form' enctype='multipart/form-data'> 
+                    {% csrf_token %}
+                    <h2>Закажите расчет навеса</h2>
+                    <div class="instruction">Введите имя</div>
+                    {{ form.name }}
+                    <div class="instruction">Введите номер телефона</div>
+                    <div style="color: red;"><b>{{ error1 }}</b></div>
+                    {{ form.number }}
+                    <div class="btn__link">
+                        <button type='submit' class='special__button' style="border-width: 0;">Заказать расчет</button>
+                    </div>
+                    <p class="btn__p">Нажимая на кнопку, вы принимаете <a href={% url 'home:privpol' %}>Политику конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>  
+    </div> 
+    {% block content1 %}
+    {% endblock %}
+    <div class="specialist__form">
+
+        <form action="#portal" method='post' id='upload_form' enctype='multipart/form-data'> 
+            {% csrf_token %}
+            <h2 id="portal" style="padding-top: 125px; margin-top: -125px;">Закажите расчет навеса</h2>
+            <div class="instruction">Введите имя</div>
+            {{ form.name }}
+            <div class="instruction">Введите номер телефона</div>
+            <div style="color: #ed212f;"><b>{{ error1 }}</b></div>
+            {{ form.number }}
+            <div class="btn__link">
+                <button type='submit' class='special__button' style="border-width: 0;">Заказать расчет</button>
+            </div>
+            <p class="btn__p">Нажимая на кнопку, вы принимаете <a href={% url 'home:privpol' %}>Политику конфиденциальности</a></p>
+        </form>
+
+    </div>
+    {% block content2 %}
+    {% endblock %}
+<section class="phone wrapper">
+    <h1 id="portal2" style="padding-top: 100px; margin-top: -100px;">Узнать стоимость навеса</h1>
+    <div class="phone__container">
+        <form action="#portal2" method='post' id='upload_form2' enctype='multipart/form-data'> 
+            {% csrf_token %}
+            <div class="phone__fields">
+                <div class="field">
+                    <div class="instruction">Вид навеса</div>
+                    {{ form2.tip }}
+                </div>
+                <div class="field">
+                    <div class="instruction">Ширина, м</div>
+                    {{ form2.width }}
+                </div>
+                <div class="field">
+                    <div class="instruction">Длина, м</div>
+                    {{ form2.length }}
+                </div>
+                <div class="field">
+                    <div class="instruction">Введитe телефон</div>
+                    {{ form2.number }}
+                    <div style="color: red;"><b>{{ error1 }}</b></div>
+                </div>
+            </div>
+            <div class="button">
+                <button type='submit' class='special__button' style="border-width: 0;">Заказать расчет</button>
+                <p class="btn__p">Нажимая на кнопку, вы принимаете <a href={% url 'home:privpol' %}>Политику конфиденциальности</a></p>
+            </div>
+        </form> 
+     </div>
+</section>
+    <footer class="wrapper">
+        <a href={% url 'home:all' %} class="logo__link">
+            <div class="logo">Хочу навес</div>
+        </a>
+        <div class="types">
+            <div class="types__header">Типы навесов</div>
+            <ul class="types__content">
+                <li><a href={% url 'home:polycarb' %}>Поликарбонат</a></li>
+                <li><a href={% url 'home:metalprof' %}>Металлопрофиль</a></li>
+                <li><a href={% url 'home:monolith' %}>Монолит</a></li>
+                <li><a href={% url 'home:softroof' %}>Мягкая кровля</a></li>
+                <li><a href={% url 'home:wood' %}>Дерево</a></li>
+                <li><a href={% url 'home:profpipe' %}>Профильная труба</a></li>
+                <li><a href={% url 'home:metaltile' %}>Металлочерепица</a></li>
+                <li><a href={% url 'home:forg' %}>Ковка</a></li>
+                <li><a href={% url 'home:calc' %}>Калькулятор стоимости</a></li>
+            </ul>
+        </div>
+        <div class="types">
+            <div class="types__header">О нас</div>
+            <ul class="types__content">
+                <li><a href={% url 'home:cont' %}>Карточка предприятия</a></li>
+                <li><a href={% url 'home:cert' %}>Сертификация</a></li>
+                <li><a href={% url 'home:privpol' %}>Политика<br>конфиденциальности</a></li>
+            </ul>
+        </div>
+        <div class="types">
+            <div class="types__header">О нас</div>
+            <ul class="types__content">
+                <li>+7 (***) *** **-**</li>
+                <li>youremail@mail.ru</li>
+            </ul>
+        </div>
+    </footer>
+    <script src={% static "js/jquery.filterizr.min.js" %}></script>
+    <script src={% static "js/materials.js" %}></script>  
+    <script src={% static "js/menu.js" %}></script>
+    <script src={% static "js/call.js" %}></script>
+    <script src={% static "js/script.js"%}></script>
+    <script src={% static "js/filterizr.js" %}></script>
+    <script src={% static "js/validator.js" %}></script>
+</body>
+</html>

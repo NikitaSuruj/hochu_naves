@@ -1,0 +1,707 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content1 %}
+<section class="hero">
+    <div class="wrapper">
+        <div class="hero__content">
+            <h1 class="white">
+                Изготовление и монтаж навесов под ключ
+            </h1>
+            <p>
+                Навесы из поликарбоната, профнастила и металлочерепицы на заказ в Краснодаре и Краснодарском крае от 2800 руб/м²
+            </p>
+            <a href={% url 'home:calc' %}>
+                <div class="btn btn_white">Рассчитать стоимость</div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="types wrapper">
+    <div class="materials__pros">
+        <h2>Преимущества навесов из разных материалов</h2>
+        <div class="nav--materials filterizr-control">
+            <ul class="materials__list filterizr-filter">
+                <li data-filter="1" class="material material__active" style="cursor: pointer;">
+                    Поликарбонат
+                </li>
+                <li data-filter="2" class="material" style="cursor: pointer;">
+                    Металлопрофиль
+                </li>
+                <li data-filter="3" class="material" style="cursor: pointer;">
+                    Монолит
+                </li>
+                <li data-filter="4" class="material" style="cursor: pointer;">
+                    Мягкая кровля
+                </li>
+                <li data-filter="5" class="material" style="cursor: pointer;">
+                    Дерево
+                </li>
+                <li data-filter="6" class="material" style="cursor: pointer;">
+                    Профильная труба
+                </li>
+                <li data-filter="7" class="material" style="cursor: pointer;">
+                    Металлочерепица
+                </li>
+                <li data-filter="8" class="material" style="cursor: pointer;">
+                    Ковка
+                </li>
+            </ul>
+        </div>
+        <div class="materials__benefits__list filtr-container">
+            <div data-category="1" class="materials__benefits polycarbonate filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Поликарбонат - прочный, лёгкий и доступный материал. Установка также обойдётся недорого - возведение фундамента не требуется</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>Материал отлично пропускает свет. Под навесом днём будет светло. При этом, поликарбонат не пропускает ультрафиолетовые лучи и защищает от жары</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Разнообразие расцветок позволяет выбрать нужный оттенок. Ознакомьтесь с доступными цветами покрытий на нашем сайте</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Поликарбонат - гибкий материал. Легко принимает форму дуги. Подойдёт для строительства арочного и полуарочного навесов</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/pol2.jpg" %} alt="polycarbonate">
+                    </div>
+                    <a href={% url 'home:polycarb' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div data-category="2" class="materials__benefits metal-profile filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Металлопрофиль - доступный и качественный материал. Навес обойдется недорого и прослужит много лет</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>Материал устойчив к воспламенению и имеет высокий огнеупорный уровень</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Плотная структура металлопрофиля позволяет материалу устойчиво реагировать на изменение температуры. Навесы не промерзают и не трескаются</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Большое разнообразие расцветок. При этом металлопрофиль не выгорает на солнце и сохраняет насыщенность цвета долгое время</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/met-prof2.jpg" %} alt="met-prof">
+                    </div>
+                    <a href={% url 'home:metalprof' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div data-category="3" class="materials__benefits monolith filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Монолитные навесы намного прочнее, чем конструкции из других материалов</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>Долгое время сохраняет привлекательный внешний вид, не требуя замены или ремонта</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Материал устойчив к любым погодным изменениям, защищает от солнечных лучей</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Пропускает большое количество света. Подходит для административных зданий</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/mon2.jpg" %} alt="monolith">
+                    </div>
+                    <a href={% url 'home:monolith' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div data-category="4" class="materials__benefits soft-roof filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Мягкая кровля считается “тихим” материалом, отлично приглушающим шум дождя. Во время ветреной погоды также будет тихо - никакого дребезжания металла</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>Эстетичный внешний вид. Гибкость черепицы позволяет реализовывать любые дизайнерские задумки</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Навесы из мягкой кровли защищают от осадков и ветра, так как полностью герметичны</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Конструкции из мягкой кровли служат много лет и стоят недорого относительно навесов из других материалов</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/soft2.jpg" %} alt="soft">
+                    </div>
+                    <a href={% url 'home:softroof' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div data-category="5" class="materials__benefits wood filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Привлекательный внешний вид навеса. Дерево - натуральный и экологичный материал, выглядит дорого и добротно</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>Удобство монтажа и обработки материала. Дерево легко пилится и крепится, не требует использования сложного оборудования</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Возможно реализовать любую архитектурную задумку, сделать арочный или прямой навес</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Легкий вес пиломатериалов и простота в транспортировке</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/wood2.jpg" %} alt="wood">
+                    </div>
+                    <a href={% url 'home:wood' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div data-category="6" class="materials__benefits profile-pipe filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Навесы из профильной трубы быстро и легко собираются. Достаточно нескольких дней, чтобы конструкция была готова</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>Из профильной трубы можно построить арочные и прямые навесы. Также можно реализовать элементы декора</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Профильная труба используется при строительстве навесов любого масштаба - от небольших конструкций до масштабных проектов</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Материал имеет малый вес, а монтаж не требует фундаментных работ. Это значительно экономит время</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/tube2.jpg" %} alt="tube">
+                    </div>
+                    <a href={% url 'home:profpipe' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div data-category="7" class="materials__benefits metal-tile filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Навесы из металлочерепицы прочны, долговечны и просты в обслуживании</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>На конструкциях не образуются плесень, грибки и мох. Загрязнения легко смываются с поверхности водой</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Материал имеет разнообразную цветовую гамму. Цвет сохраняет насыщенность долгое время</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Навесы устойчивы к погодным изменениям и не боятся дождя, снега, ветра, не пропускают ультрафиолетовые лучи</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/met-tile2.jpg" %} alt="met-tile">
+                    </div>
+                    <a href={% url 'home:metaltile' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+            <div data-category="8" class="materials__benefits forging filtr filtr-item">
+                <div class="materials__text">
+                    <div class="text__block">
+                        <div class="text__number">1</div>
+                        <p>Кованые элементы сочетаются с любым видом материала для навеса, при этом эстетично дополняют внешний вид навеса</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">2</div>
+                        <p>С помощью кованых элементов можно реализовать эксклюзивный дизайн навеса</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">3</div>
+                        <p>Плотная структура материала ковки не поддается повреждениям и устойчива к погодным изменениям</p>
+                    </div>
+                    <div class="text__block">
+                        <div class="text__number">4</div>
+                        <p>Кованый навес подойдет для частных, общественных и коммерческих территорий</p>
+                    </div>
+                </div>
+                <div class="materials__pic">
+                    <div class="materials__img">
+                        <img src={% static "img/index/forg2.jpg" %} alt="forged">
+                    </div>
+                    <a href={% url 'home:forg' %}>
+                        <div class="btn btn_blue">Подробнее</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>        
+</section>
+<section class="pros">
+    <div class="pros__container wrapper">
+        <h1 class="white">Почему выбирают нас</h1>
+        <div class="pros__list">
+            <div class="pros__list__first">
+                <div class="benefit">
+                    <div class="icon icon4 white">
+                        <img src={% static "img/index/job.png" %} alt="job">
+                    </div>
+                    <div class="benefit__text white">Все работы под ключ</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon5 white">
+                        <img src={% static "img/index/time.png" %} alt="time">
+                    </div>
+                    <div class="benefit__text white">Быстрое выполение</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon6 white">
+                        <img src={% static "img/index/money.png" %} alt="money">
+                    </div>
+                    <div class="benefit__text white">Низкие цены</div>
+                </div>
+            </div>
+            <div class="pros__list__second">
+                <div class="benefit">
+                    <div class="icon icon7 white">
+                        <img src={% static "img/index/van.png" %} alt="van">
+                    </div>
+                    <div class="benefit__text white">Бесплатный выезд</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon8 white">
+                        <img src={% static "img/index/transaction.png" %} alt="transaction">
+                    </div>
+                    <div class="benefit__text white">Без 100% предоплат</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon9 white">
+                        <img src={% static "img/index/warranty.png" %} alt="warranty">
+                    </div>
+                    <div class="benefit__text white">Гарантия 5 лет</div>
+                </div>
+            </div>
+        </div>
+        <div class="pros__list__mini">
+            <div class="pros__list__first">
+                <div class="benefit">
+                    <div class="icon icon4 white">
+                        <img src={% static "img/index/job.png" %} alt="job">
+                    </div>
+                    <div class="benefit__text white">Все работы под ключ</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon5 white">
+                        <img src={% static "img/index/time.png" %} alt="time">
+                    </div>
+                    <div class="benefit__text white">Быстрое выполение</div>
+                </div>
+            </div>
+            <div class="pros__list__first">
+                <div class="benefit">
+                    <div class="icon icon6 white">
+                        <img src={% static "img/index/money.png" %} alt="money">
+                    </div>
+                    <div class="benefit__text white">Низкие цены</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon7 white">
+                        <img src={% static "img/index/van.png" %} alt="van">
+                    </div>
+                    <div class="benefit__text white">Бесплатный выезд</div>
+                </div>
+            </div>
+            <div class="pros__list__first">
+                <div class="benefit">
+                    <div class="icon icon8 white">
+                        <img src={% static "img/index/transaction.png" %} alt="transaction">
+                    </div>
+                    <div class="benefit__text white">Без 100% предоплат</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon9 white">
+                        <img src={% static "img/index/warranty.png" %} alt="warranty">
+                    </div>
+                    <div class="benefit__text white">Гарантия 5 лет</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+<section class="specialist wrapper">
+    <div class="specialist__question">
+        <h2>Не знаете, какой навес вам нужен?</h2>
+        <p>Закажите звонок от специалиста, который поможет вам определиться с выбором и предложит конструкцию навеса. Это полностью бесплатно  </p>
+    </div>
+{% endblock %}
+
+{% block content2 %}
+<div class="specialist__benefits">
+    <h2>Специалист определит</h2>
+    <div class="benefits__list">
+        <div class="benefit">
+            <div class="icon icon1">
+                <img src={% static "img/brush.png" %} alt="brush">
+            </div>
+            <div class="benefit__text">Цвет кровли и стоек</div>
+        </div>
+        <div class="benefit">
+            <div class="icon icon2">
+                <img src={% static "img/roof.png" %} alt="roof">
+            </div>
+            <div class="benefit__text">Материалы кровли</div>
+        </div>
+        <div class="benefit">
+            <div class="icon icon3">
+                <img src={% static "img/ruler.png" %} alt="ruler">
+            </div>
+            <div class="benefit__text">Форму и размер</div>
+        </div>
+    </div>
+</div>
+</section>
+<section class="types wrapper">
+    <h1>Какие навесы мы делаем</h1>
+    <h2>По типу конструкции</h2>
+    <div class="types__construction">
+        <div class="construction__first">
+            <div class="types__construction__new">
+                <div class="type__image type__image__first">
+                    <img src={% static "img/index/1.jpg" %} alt="1">
+                </div>
+                <div class="type__name">Односкатный навес</div>
+            </div>
+            <div class="types__construction__new">
+                <div class="type__image type__image__first">
+                    <img src={% static "img/index/2.jpg" %} alt="2">
+                </div>
+                <div class="type__name">Двускатный навес</div>
+            </div>
+        </div>
+        <div class="construction__first">
+            <div class="types__construction__new">
+                <div class="type__image type__image__first">
+                    <img src={% static "img/index/3.jpg" %} alt="3">
+                </div>
+                <div class="type__name">Арочный навес</div>
+            </div>
+            <div class="types__construction__new">
+                <div class="type__image type__image__first">
+                    <img src={% static "img/index/4.jpg" %} alt="4">
+                </div>
+                <div class="type__name">Прямой навес</div>
+            </div> 
+        </div>
+    </div>
+    <h2>Из каких материалов</h2>
+    <div class="types__construction">
+        <div class="construction__first">
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/pol.png" %} alt="pol">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из поликарбоната</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>800</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>1900</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/soft.png" %} alt="soft">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из мягкой кровли</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>1200</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>3200</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+        </div>
+        <div class="construction__first">
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/pipe.png" %} alt="pipe">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из профильной трубы</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>700</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>1700</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/mon.png" %} alt="mon">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Монолитные навесы</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>1200</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>3500</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="types__construction">
+        <div class="construction__first">
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/met-tile.png" %} alt="met-tile">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из металлочерепицы</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>1000</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>2600</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/met-prof.png" %} alt="met-prof">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из металлопрофиля</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>700</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>1800</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+        </div>
+        <div class="construction__first">
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/forg.png" %} alt="forg">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Кованые навесы</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>2000</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>4000</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/wood.png" %} alt="3">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из дерева</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>1500</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>3500</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Любой цвет на выбор</h2>
+    <div class="colors__full">
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image red"></div>
+                    <div class="color__text">Красный</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image blue"></div>
+                    <div class="color__text">Синий</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image bronze"></div>
+                    <div class="color__text">Бронзовый</div>
+                </div>
+            </div>
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image grey"></div>
+                    <div class="color__text">Серый</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image orange"></div>
+                    <div class="color__text">Оранжевый</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image silver"></div>
+                    <div class="color__text">Серебро</div>
+                </div>
+            </div>
+        </div>
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image fish"></div>
+                    <div class="color__text">Бирюзовый</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image opaul"></div>
+                    <div class="color__text">Опал</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image yellow"></div>
+                    <div class="color__text">Жёлтый</div>
+                </div>
+            </div>
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image green"></div>
+                    <div class="color__text">Зелёный</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image pomegranate"></div>
+                    <div class="color__text">Гранат</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image light-blue"></div>
+                    <div class="color__text">Голубой</div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="colors__full--mini">
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image red"></div>
+                    <div class="color__text">Красный</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image blue"></div>
+                    <div class="color__text">Синий</div>
+                </div>
+            </div>
+        </div>
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image bronze"></div>
+                    <div class="color__text">Бронзовый</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image grey"></div>
+                    <div class="color__text">Серый</div>
+                </div>
+            </div>
+        </div>
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image orange"></div>
+                    <div class="color__text">Оранжевый</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image silver"></div>
+                    <div class="color__text">Серебро</div>
+                </div>
+            </div>
+        </div>
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image fish"></div>
+                    <div class="color__text">Бирюзовый</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image opaul"></div>
+                    <div class="color__text">Опал</div>
+                </div>
+            </div>
+        </div>
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image yellow"></div>
+                    <div class="color__text">Жёлтый</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image green"></div>
+                    <div class="color__text">Зелёный</div>
+                </div>
+            </div>
+        </div>
+        <div class="colors__list">
+            <div class="colors__row">
+                <div class="color__item">
+                    <div class="color__image pomegranate"></div>
+                    <div class="color__text">Гранат</div>
+                </div>
+                <div class="color__item">
+                    <div class="color__image light-blue"></div>
+                    <div class="color__text">Голубой</div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content1 %}
+    <section class="hero wood__new">
+        <div class="wrapper">
+            <div class="hero__content">
+                <h1 class="white">
+                    Изготовление и монтаж навесов из дерева
+                </h1>
+                <p>
+                    Навесы из дерева на заказ в Краснодаре и Краснодарском крае от 2800 руб/м²
+                </p>
+                <a href={% url 'home:calc' %}>
+                    <div class="btn btn_white">Рассчитать стоимость</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="types wrapper">
+        <h1>Какие навесы мы делаем</h1>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/car.jpg' %} alt="car">
+                    </div>
+                    <div class="type__name">Навес из дерева для автомобиля</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/auto__double.jpg' %} alt="auto__double">
+                    </div>
+                    <div class="type__name">Навес из дерева для двух машин</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/house.jpg' %} alt="house">
+                    </div>
+                    <div class="type__name">Навес из дерева к дому</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/threshold.jpg' %} alt="threshold">
+                    </div>
+                    <div class="type__name">Навес из дерева над крыльцом</div>
+                </div>
+            </div>
+        </div>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/cap.jpg' %} alt="cap">
+                    </div>
+                    <div class="type__name">Навес-козырек</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/countryhouse.jpg' %} alt="countryhouse">
+                    </div>
+                    <div class="type__name">Навес для дачи</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/street.jpg' %} alt="street">
+                    </div>
+                    <div class="type__name">Уличный навес</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/gate.jpg' %} alt="gate">
+                    </div>
+                    <div class="type__name">Навес над калиткой</div>
+                </div>
+            </div>
+        </div>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/gate.jpg' %} alt="veranda">
+                    </div>
+                    <div class="type__name">Навес-веранда</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/pavilion.jpg' %} alt="pavilion">
+                    </div>
+                    <div class="type__name">Навес-беседка</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/terrace.jpg' %} alt="terrace">
+                    </div>
+                    <div class="type__name">Навес для террасы</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/barbeque.jpg' %} alt="barbeque">
+                    </div>
+                    <div class="type__name">Навес для барбекю</div>
+                </div>
+            </div>
+        </div>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/brazier.jpg' %} alt="brazier">
+                    </div>
+                    <div class="type__name">Навес для мангала</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/firewood.jpg' %} alt="firewood">
+                    </div>
+                    <div class="type__name">Навес для дров</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/grapes.jpg' %} alt="grapes">
+                    </div>
+                    <div class="type__name">Навес для винограда</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/summer.jpeg' %} alt="summer">
+                    </div>
+                    <div class="type__name">Летний навес для отдыха</div>
+                </div>
+            </div>
+        </div>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/props.jpg' %} alt="props">
+                    </div>
+                    <div class="type__name">Навес на деревянных опорах</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/beam.jpg' %} alt="beam">
+                    </div>
+                    <div class="type__name">Навес из деревянных балок</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/wood__polycarbonate.jpg' %} alt="wood__polycarbonate">
+                    </div>
+                    <div class="type__name">Дерево и поликарбонат</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/wood__metal-profile.jpg' %} alt="wood__metal-profile">
+                    </div>
+                    <div class="type__name">Дерево и металлопрофиль</div>
+                </div>
+            </div>
+        </div>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/single.jpg' %} alt="single">
+                    </div>
+                    <div class="type__name">Односкатный навес</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/double.jpg' %} alt="double">
+                    </div>
+                    <div class="type__name">Двускатный навес</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/arch.jpg' %} alt="arch">
+                    </div>
+                    <div class="type__name">Арочный деревянный навес</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static 'img/wood/straight.jpg' %} alt="straight">
+                    </div>
+                    <div class="type__name">Прямой деревянный навес</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="specialist wrapper">
+        <div class="specialist__question">
+            <h2>Не знаете, какой навес вам нужен?</h2>
+            <p>Закажите звонок от специалиста, который поможет вам определиться с выбором и предложит конструкцию навеса. Это полностью бесплатно  </p>
+        </div>
+{% endblock %}
+{% block content2 %}
+        <div class="specialist__benefits">
+            <h2>Специалист определит</h2>
+            <div class="benefits__list">
+                <div class="benefit">
+                    <div class="icon icon1">
+                        <img src={% static 'img/brush.png' %} alt="brush">
+                    </div>
+                    <div class="benefit__text">Цвет кровли и стоек</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon2">
+                        <img src={% static 'img/roof.png' %} alt="roof">
+                    </div>
+                    <div class="benefit__text">Материалы кровли</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon3">
+                        <img src={% static 'img/ruler.png' %} alt="ruler">
+                    </div>
+                    <div class="benefit__text">Форму и размер</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="types wrapper">
+        <div class="materials__pros">
+            <div class="materials__benefits__list">
+                <div class="materials__benefits">
+                    <div class="materials__pic__second">
+                        <div class="materials__img__second">
+                            <img src={% static "img/wood/example.jpg" %} alt="example">
+                        </div>
+                    </div>
+                    <div class="materials__text--new">
+                        <h2>Навесы из дерева</h2>
+                        <div class="text__block">
+                            <p><span>Кровля: </span>поликарбонат, металлопрофиль, металлочерепица<br>
+                                <span>Каркас: </span>дерево/профильная труба<br>
+                                <span>Силовые боковые балки: </span>от 40 × 40 до 100 × 100 мм<br>
+                                <span>Столбы каркаса: </span>от 100 × 100 до 200 × 200 мм<br>
+                                <span>Обрешётка: </span>от 40 × 15 до 60 × 40 мм<br>
+                                <span>Бетонирование столбов: </span>от 0.5 до 2 м<br>
+                            </p>
+                        </div>
+                        <div class="text__block">
+                            <p>Стоимость монтажа: <span class="span__first">от <span class="span__two">1500</span> руб/м²</span><br>
+                                Стоимость под ключ: <span class="span__first"> от <span class="span__two">3500</span> руб/м²</span>
+                            </p>
+                        </div>
+                        <div class="btn__link align__left">
+                            <a href={% url 'home:calc' %} class="special__button">Хочу такой же навес</a>
+                        </div>
+                    </div>     
+                    <div class="materials--mini">
+                        <h2>Навесы из поликарбоната</h2>
+                        <div class="text__block">
+                            <p><span>Кровля: </span><br>поликарбонат, металлопрофиль, металлочерепица<br>
+                                <span>Каркас: </span><br>дерево/профильная труба<br>
+                                <span>Силовые боковые балки: </span><br>от 40 × 40 до 100 × 100 мм<br>
+                                <span>Столбы каркаса: </span><br>от 100 × 100 до 200 × 200 мм<br>
+                                <span>Обрешётка: </span><br>от 40 × 15 до 60 × 40 мм<br>
+                                <span>Бетонирование столбов: </span><br>от 0.5 до 2 м<br>
+                            </p>
+                        </div>
+                        <div class="text__block">
+                            <p>Стоимость монтажа: <span class="span__first"><br>от <span class="span__two">1500</span> руб/м²</span><br>
+                                Стоимость под ключ: <span class="span__first"><br>от <span class="span__two">3500</span> руб/м²</span>
+                            </p>
+                        </div>
+                        <div class="btn__link align__left">
+                            <a href={% url 'home:calc' %} class="special__button">Хочу такой же навес</a>
+                        </div>
+                    </div>                       
+                </div> 
+            </div>
+        </div>
+    </section>
+{% endblock %}

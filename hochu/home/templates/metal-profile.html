@@ -1,0 +1,465 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content1 %} 
+    <section class="hero metal-profile__new">
+        <div class="wrapper">
+            <div class="hero__content">
+                <h1 class="white">
+                    Навесы из металлопрофиля под ключ
+                </h1>
+                <p>
+                    Навесы из металлопрофиля на заказ в Краснодаре и Краснодарском крае от 2800 руб/м²
+                </p>
+                <a href={% url 'home:calc' %}>
+                    <div class="btn btn_white">Рассчитать стоимость</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="types wrapper">
+        <h1>Какие навесы мы делаем</h1>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/auto.jpg' %} alt="auto">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Навесы из металлопрофиля для автомобилей</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>800</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>1900</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/threshold.jpg' %} alt="threshold">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Навесы из металлопрофиля над крыльцом</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>1100</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>2300</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/house.jpg' %} alt="house">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Навесы из металлопрофиля к дому</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>700</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>1700</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/countryhouse.jpg' %} alt="countryhouse">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Навесы из металлопрофиля для дачи</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>800</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>1800</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/single.jpg' %} alt="single">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Односкатные навесы из металлопрофиля</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>700</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>1700</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/double.jpg' %} alt="double">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Двускатные навесы из металлопрофиля</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>800</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>1800</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/arch.jpg' %} alt="arch">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Арочные навесы из металлопрофиля</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>900</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>1900</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+                <div class="types__construction">
+                    <div class="type__name__second">
+                        <div class="type__image">
+                            <img src={% static 'img/metal-profile/straight.jpg' %} alt="straight">
+                        </div>
+                        <div class="type__text">
+                            <div class="price__heading">Прямые навесы из металлопрофиля</div>
+                            <div class="price__name">Стоимость монтажа:</div>
+                            <p class="price__value">от <span>700</span> руб/м²</p>
+                            <div class="price__name">Стоимость под ключ:</div>
+                            <p class="price__value">от <span>1700</span> руб/м²</p>
+                        </div>
+                        <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="specialist wrapper">
+        <div class="specialist__question">
+            <h2>Не знаете, какой навес вам нужен?</h2>
+            <p>Закажите звонок от специалиста, который поможет вам определиться с выбором и предложит конструкцию навеса. Это полностью бесплатно  </p>
+        </div>
+{% endblock %}
+{% block content2  %}
+        <div class="specialist__benefits">
+            <h2>Специалист определит</h2>
+            <div class="benefits__list">
+                <div class="benefit">
+                    <div class="icon icon1">
+                        <img src={% static 'img/brush.png' %} alt="brush">
+                    </div>
+                    <div class="benefit__text">Цвет кровли и стоек</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon2">
+                        <img src={% static 'img/roof.png' %} alt="roof">
+                    </div>
+                    <div class="benefit__text">Материалы кровли</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon3">
+                        <img src={% static 'img/ruler.png' %} alt="ruler">
+                    </div>
+                    <div class="benefit__text">Форму и размер</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="types wrapper">
+        <div class="materials__pros">
+            <div class="materials__benefits__list">
+                <div class="materials__benefits">
+                    <div class="materials__pic__second">
+                        <div class="materials__img__second">
+                            <img src={% static 'img/metal-profile/example.jpg' %} alt="example">
+                        </div>
+                    </div>
+                    <div class="materials__text--new">
+                        <h2>Навесы из металлопрофиля</h2>
+                        <div class="text__block">
+                            <p><span>Высота металлопрофиля: </span>от 8 до 21 мм<br>
+                                <span>Толщина металлопрофиля: </span>от 0.4 до 0.9 мм<br>
+                                <span>Покрытие: </span>оцинкованное/полимерное<br>
+                                <span>Столбы каркаса: </span>от 80 × 80 до 150 × 150 мм<br>
+                                <span>Силовые боковые балки: </span>от 60 × 60 до 150 × 150 мм<br>
+                                <span>Обрешетка (лаги): </span>от 20 × 20 до 80 × 80 мм<br>
+                            </p>
+                        </div>
+                        <div class="text__block">
+                            <p>Стоимость монтажа: <span class="span__first">от <span class="span__two">800</span> руб/м²</span><br>
+                                Стоимость под ключ: <span class="span__first"> от <span class="span__two">1900</span> руб/м²</span>
+                            </p>
+                        </div>
+                        <div class="btn__link align__left">
+                            <a href={% url 'home:calc' %} class="special__button">Хочу такой же навес</a>
+                        </div>
+                    </div>     
+                    <div class="materials--mini">
+                        <h2>Навесы из поликарбоната</h2>
+                        <div class="text__block">
+                            <p><span>Высота металлопрофиля: </span><br>от 8 до 21 мм<br>
+                                <span>Толщина металлопрофиля: </span><br>от 0.4 до 0.9 мм<br>
+                                <span>Покрытие: </span><br>оцинкованное/полимерное<br>
+                                <span>Столбы каркаса: </span><br>от 80 × 80 до 150 × 150 мм<br>
+                                <span>Силовые боковые балки: </span><br>от 60 × 60 до 150 × 150 мм<br>
+                                <span>Обрешетка (лаги): </span><br>от 20 × 20 до 80 × 80 мм<br>
+                            </p>
+                        </div>
+                        <div class="text__block">
+                            <p>Стоимость монтажа: <span class="span__first"><br>от <span class="span__two">800</span> руб/м²</span><br>
+                                Стоимость под ключ: <span class="span__first"><br>от <span class="span__two">1900</span> руб/м²</span>
+                            </p>
+                        </div>
+                        <div class="btn__link align__left">
+                            <a href={% url 'home:calc' %} class="special__button">Хочу такой же навес</a>
+                        </div>
+                    </div>                       
+                </div> 
+            </div>
+        </div>
+        <h2>Любой цвет на выбор</h2>
+            <div class="colors__full">
+                <div class="colors__list">
+                    <div class="colors__row">
+                        <div class="color__item">
+                            <div class="color__image ral1014"></div>
+                            <div class="color__text">RAL 1014</div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral1018"></div>
+                            <div class="color__text">RAL 1018
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral2004"></div>
+                            <div class="color__text">RAL 2004
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colors__row">
+                        <div class="color__item">
+                            <div class="color__image ral2010"></div>
+                            <div class="color__text">RAL 2010
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral3003"></div>
+                            <div class="color__text">RAL 3003
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral3009"></div>
+                            <div class="color__text">RAL 3009
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="colors__list">
+                    <div class="colors__row">
+                        <div class="color__item">
+                            <div class="color__image ral5002"></div>
+                            <div class="color__text">RAL 5002
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral5005"></div>
+                            <div class="color__text">RAL 5005
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral5021"></div>
+                            <div class="color__text">RAL 5021
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colors__row">
+                        <div class="color__item">
+                            <div class="color__image ral5024"></div>
+                            <div class="color__text">RAL 5024
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral6002"></div>
+                            <div class="color__text">RAL 6002
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral6005"></div>
+                            <div class="color__text">RAL 6005
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="colors__list">
+                    <div class="colors__row">
+                        <div class="color__item">
+                            <div class="color__image ral6020"></div>
+                            <div class="color__text">RAL 6020
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral7004"></div>
+                            <div class="color__text">RAL 7004
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral7024"></div>
+                            <div class="color__text">RAL 7024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colors__row">
+                        <div class="color__item">
+                            <div class="color__image ral8017"></div>
+                            <div class="color__text">RAL 8017
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral9003"></div>
+                            <div class="color__text">RAL 9003
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__image ral9006"></div>
+                            <div class="color__text">RAL 9006
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div class="colors__full--mini">
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral1014"></div>
+                        <div class="color__text">RAL 1014
+                        </div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral1018"></div>
+                        <div class="color__text">RAL 1018
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral2004"></div>
+                        <div class="color__text">RAL 2004
+                        </div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral2010"></div>
+                        <div class="color__text">RAL 2010
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral3003"></div>
+                        <div class="color__text">RAL 3003
+                        </div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral3009"></div>
+                        <div class="color__text">RAL 3009
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral5002"></div>
+                        <div class="color__text">RAL 5002</div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral5005"></div>
+                        <div class="color__text">RAL 5005</div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral5021"></div>
+                        <div class="color__text">RAL 5021</div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral5024"></div>
+                        <div class="color__text">RAL 5024</div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral6002"></div>
+                        <div class="color__text">RAL 6002</div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral6005"></div>
+                        <div class="color__text">RAL 6005</div>
+                    </div> 
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral6020"></div>
+                        <div class="color__text">RAL 6020</div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral7004"></div>
+                        <div class="color__text">RAL 7004</div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral7024"></div>
+                        <div class="color__text">RAL 7024</div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral8017"></div>
+                        <div class="color__text">RAL 8017</div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__list">
+                <div class="colors__row">
+                    <div class="color__item">
+                        <div class="color__image ral9003"></div>
+                        <div class="color__text">RAL 9003</div>
+                    </div>
+                    <div class="color__item">
+                        <div class="color__image ral9006"></div>
+                        <div class="color__text">RAL 9006</div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

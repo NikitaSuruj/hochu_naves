@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content1 %} 
+    <section class="hero forged__new">
+        <div class="wrapper">
+            <div class="hero__content">
+                <h1 class="white">
+                    Кованные навесы под ключ
+                </h1>
+                <p>
+                   Кованные навесы на заказ в Краснодаре и Краснодарском крае от 2800 руб/м²
+                </p>
+                <a href={% url 'home:calc' %}>
+                    <div class="btn btn_white">Рассчитать стоимость</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="types wrapper">
+        <h1>Какие навесы мы делаем</h1>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/car.jpg" %} alt="car">
+                    </div>
+                    <div class="type__name">Кованый навес для автомобиля</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/threshold.jpeg" %} alt="threshold">
+                    </div>
+                    <div class="type__name">Кованый навес над крыльцом</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/house.jpg" %} alt="house">
+                    </div>
+                    <div class="type__name">Кованый навес для дома</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/countryhouse.jpg" %} alt="countryhouse">
+                    </div>
+                    <div class="type__name">Кованый навес для дачи</div>
+                </div>
+            </div>
+        </div>
+        <div class="types__construction">
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/single.jpg" %} alt="single">
+                    </div>
+                    <div class="type__name">Односкатный навес</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/double.jpg" %} alt="double">
+                    </div>
+                    <div class="type__name">Двускатный навес</div>
+                </div>
+            </div>
+            <div class="construction__first">
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/arch.jpg" %} alt="arch">
+                    </div>
+                    <div class="type__name">Арочный навес</div>
+                </div>
+                <div class="types__construction__new">
+                    <div class="type__image type__image__first">
+                        <img src={% static "img/forged/straight.jpg" %} alt="straight">
+                    </div>
+                    <div class="type__name">Прямой навес</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="specialist wrapper">
+        <div class="specialist__question">
+            <h2>Не знаете, какой навес вам нужен?</h2>
+            <p>Закажите звонок от специалиста, который поможет вам определиться с выбором и предложит конструкцию навеса. Это полностью бесплатно  </p>
+        </div>
+{% endblock %}
+{% block content2 %}
+        <div class="specialist__benefits">
+            <h2>Специалист определит</h2>
+            <div class="benefits__list">
+                <div class="benefit">
+                    <div class="icon icon1">
+                        <img src={% static "img/brush.png" %} alt="brush">
+                    </div>
+                    <div class="benefit__text">Цвет кровли и стоек</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon2">
+                        <img src={% static "img/roof.png" %} alt="roof">
+                    </div>
+                    <div class="benefit__text">Материалы кровли</div>
+                </div>
+                <div class="benefit">
+                    <div class="icon icon3">
+                        <img src={% static "img/ruler.png" %} alt="ruler">
+                    </div>
+                    <div class="benefit__text">Форму и размер</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="types wrapper">
+        <div class="materials__pros">
+            <div class="materials__benefits__list">
+                <div class="materials__benefits">
+                    <div class="materials__pic__second">
+                        <div class="materials__img__second">
+                            <img src={% static "img/forged/example.jpg" %} alt="example">
+                        </div>
+                    </div>
+                    <div class="materials__text--new">
+                        <h2>Кованые навесы</h2>
+                        <div class="text__block">
+                            <p><span>Кровля: </span>поликарбонат, металлопрофиль, металлочерепица<br>
+                                <span>Каркас: </span>сталь<br>
+                                <span>Столбы каркаса: </span>от 80 × 80 до 150 × 150 мм<br>
+                                <span>Силовые боковые балки: </span>от 60 × 60 до 150 × 150 мм<br>
+                                <span>Обрешётка (лаги): </span>от 20 × 20 до 80 × 80 мм<br>
+                                <span>Бетонирование столбов: </span>от 1 до 2 м<br>
+                            </p>
+                        </div>
+                        <div class="text__block">
+                            <p>Стоимость монтажа: <span class="span__first">от <span class="span__two">2000</span> руб/м²</span><br>
+                                Стоимость под ключ: <span class="span__first"> от <span class="span__two">4000</span> руб/м²</span>
+                            </p>
+                        </div>
+                        <div class="btn__link align__left">
+                            <a href={% url 'home:calc' %} class="special__button">Хочу такой же навес</a>
+                        </div>
+                    </div>     
+                    <div class="materials--mini">
+                        <h2>Навесы из поликарбоната</h2>
+                        <div class="text__block">
+                            <p><span>Кровля: </span><br>поликарбонат, металлопрофиль, металлочерепица<br>
+                                <span>Каркас: </span><br>сталь<br>
+                                <span>Столбы каркаса: </span><br>от 80 × 80 до 150 × 150 мм<br>
+                                <span>Силовые боковые балки: </span><br>от 60 × 60 до 150 × 150 мм<br>
+                                <span>Обрешётка (лаги): </span><br>от 20 × 20 до 80 × 80 мм<br>
+                                <span>Бетонирование столбов: </span><br>от 1 до 2 м<br>
+                            </p>
+                        </div>
+                        <div class="text__block">
+                            <p>Стоимость монтажа: <span class="span__first"><br>от <span class="span__two">2000</span> руб/м²</span><br>
+                                Стоимость под ключ: <span class="span__first"><br>от <span class="span__two">4000</span> руб/м²</span>
+                            </p>
+                        </div>
+                        <div class="btn__link align__left">
+                            <a href={% url 'home:calc' %} class="special__button">Хочу такой же навес</a>
+                        </div>
+                    </div>                       
+                </div> 
+            </div>
+        </div>
+    </section>
+{% endblock %}
