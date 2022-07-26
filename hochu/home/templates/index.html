@@ -29,21 +29,15 @@
                     Металлопрофиль
                 </li>
                 <li data-filter="3" class="material" style="cursor: pointer;">
-                    Монолит
-                </li>
-                <li data-filter="4" class="material" style="cursor: pointer;">
                     Мягкая кровля
                 </li>
-                <li data-filter="5" class="material" style="cursor: pointer;">
+                <li data-filter="4" class="material" style="cursor: pointer;">
                     Дерево
                 </li>
-                <li data-filter="6" class="material" style="cursor: pointer;">
-                    Профильная труба
-                </li>
-                <li data-filter="7" class="material" style="cursor: pointer;">
+                <li data-filter="5" class="material" style="cursor: pointer;">
                     Металлочерепица
                 </li>
-                <li data-filter="8" class="material" style="cursor: pointer;">
+                <li data-filter="6" class="material" style="cursor: pointer;">
                     Ковка
                 </li>
             </ul>
@@ -105,35 +99,7 @@
                     </a>
                 </div>
             </div>
-            <div data-category="3" class="materials__benefits monolith filtr-item">
-                <div class="materials__text">
-                    <div class="text__block">
-                        <div class="text__number">1</div>
-                        <p>Монолитные навесы намного прочнее, чем конструкции из других материалов</p>
-                    </div>
-                    <div class="text__block">
-                        <div class="text__number">2</div>
-                        <p>Долгое время сохраняет привлекательный внешний вид, не требуя замены или ремонта</p>
-                    </div>
-                    <div class="text__block">
-                        <div class="text__number">3</div>
-                        <p>Материал устойчив к любым погодным изменениям, защищает от солнечных лучей</p>
-                    </div>
-                    <div class="text__block">
-                        <div class="text__number">4</div>
-                        <p>Пропускает большое количество света. Подходит для административных зданий</p>
-                    </div>
-                </div>
-                <div class="materials__pic">
-                    <div class="materials__img">
-                        <img src={% static "img/index/mon2.jpg" %} alt="monolith">
-                    </div>
-                    <a href={% url 'home:monolith' %}>
-                        <div class="btn btn_blue">Подробнее</div>
-                    </a>
-                </div>
-            </div>
-            <div data-category="4" class="materials__benefits soft-roof filtr-item">
+            <div data-category="3" class="materials__benefits soft-roof filtr-item">
                 <div class="materials__text">
                     <div class="text__block">
                         <div class="text__number">1</div>
@@ -161,7 +127,7 @@
                     </a>
                 </div>
             </div>
-            <div data-category="5" class="materials__benefits wood filtr-item">
+            <div data-category="4" class="materials__benefits wood filtr-item">
                 <div class="materials__text">
                     <div class="text__block">
                         <div class="text__number">1</div>
@@ -189,35 +155,7 @@
                     </a>
                 </div>
             </div>
-            <div data-category="6" class="materials__benefits profile-pipe filtr-item">
-                <div class="materials__text">
-                    <div class="text__block">
-                        <div class="text__number">1</div>
-                        <p>Навесы из профильной трубы быстро и легко собираются. Достаточно нескольких дней, чтобы конструкция была готова</p>
-                    </div>
-                    <div class="text__block">
-                        <div class="text__number">2</div>
-                        <p>Из профильной трубы можно построить арочные и прямые навесы. Также можно реализовать элементы декора</p>
-                    </div>
-                    <div class="text__block">
-                        <div class="text__number">3</div>
-                        <p>Профильная труба используется при строительстве навесов любого масштаба - от небольших конструкций до масштабных проектов</p>
-                    </div>
-                    <div class="text__block">
-                        <div class="text__number">4</div>
-                        <p>Материал имеет малый вес, а монтаж не требует фундаментных работ. Это значительно экономит время</p>
-                    </div>
-                </div>
-                <div class="materials__pic">
-                    <div class="materials__img">
-                        <img src={% static "img/index/tube2.jpg" %} alt="tube">
-                    </div>
-                    <a href={% url 'home:profpipe' %}>
-                        <div class="btn btn_blue">Подробнее</div>
-                    </a>
-                </div>
-            </div>
-            <div data-category="7" class="materials__benefits metal-tile filtr-item">
+            <div data-category="5" class="materials__benefits metal-tile filtr-item">
                 <div class="materials__text">
                     <div class="text__block">
                         <div class="text__number">1</div>
@@ -245,7 +183,7 @@
                     </a>
                 </div>
             </div>
-            <div data-category="8" class="materials__benefits forging filtr filtr-item">
+            <div data-category="6" class="materials__benefits forging filtr filtr-item">
                 <div class="materials__text">
                     <div class="text__block">
                         <div class="text__number">1</div>
@@ -438,72 +376,6 @@
             <div class="types__construction">
                 <div class="type__name__second">
                     <div class="type__image">
-                        <img src={% static "img/index/pol.png" %} alt="pol">
-                    </div>
-                    <div class="type__text">
-                        <div class="price__heading">Навесы из поликарбоната</div>
-                        <div class="price__name">Стоимость монтажа:</div>
-                        <p class="price__value">от <span>800</span> руб/м²</p>
-                        <div class="price__name">Стоимость под ключ:</div>
-                        <p class="price__value">от <span>1900</span> руб/м²</p>
-                    </div>
-                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
-                </div>
-            </div>
-            <div class="types__construction">
-                <div class="type__name__second">
-                    <div class="type__image">
-                        <img src={% static "img/index/soft.png" %} alt="soft">
-                    </div>
-                    <div class="type__text">
-                        <div class="price__heading">Навесы из мягкой кровли</div>
-                        <div class="price__name">Стоимость монтажа:</div>
-                        <p class="price__value">от <span>1200</span> руб/м²</p>
-                        <div class="price__name">Стоимость под ключ:</div>
-                        <p class="price__value">от <span>3200</span> руб/м²</p>
-                    </div>
-                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
-                </div>
-            </div>
-        </div>
-        <div class="construction__first">
-            <div class="types__construction">
-                <div class="type__name__second">
-                    <div class="type__image">
-                        <img src={% static "img/index/pipe.png" %} alt="pipe">
-                    </div>
-                    <div class="type__text">
-                        <div class="price__heading">Навесы из профильной трубы</div>
-                        <div class="price__name">Стоимость монтажа:</div>
-                        <p class="price__value">от <span>700</span> руб/м²</p>
-                        <div class="price__name">Стоимость под ключ:</div>
-                        <p class="price__value">от <span>1700</span> руб/м²</p>
-                    </div>
-                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
-                </div>
-            </div>
-            <div class="types__construction">
-                <div class="type__name__second">
-                    <div class="type__image">
-                        <img src={% static "img/index/mon.png" %} alt="mon">
-                    </div>
-                    <div class="type__text">
-                        <div class="price__heading">Монолитные навесы</div>
-                        <div class="price__name">Стоимость монтажа:</div>
-                        <p class="price__value">от <span>1200</span> руб/м²</p>
-                        <div class="price__name">Стоимость под ключ:</div>
-                        <p class="price__value">от <span>3500</span> руб/м²</p>
-                    </div>
-                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="types__construction">
-        <div class="construction__first">
-            <div class="types__construction">
-                <div class="type__name__second">
-                    <div class="type__image">
                         <img src={% static "img/index/met-tile.png" %} alt="met-tile">
                     </div>
                     <div class="type__text">
@@ -559,6 +431,40 @@
                         <p class="price__value">от <span>1500</span> руб/м²</p>
                         <div class="price__name">Стоимость под ключ:</div>
                         <p class="price__value">от <span>3500</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="types__construction">
+        <div class="construction__first">
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/pol.png" %} alt="pol">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из поликарбоната</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>800</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>1900</span> руб/м²</p>
+                    </div>
+                    <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
+                </div>
+            </div>
+            <div class="types__construction">
+                <div class="type__name__second">
+                    <div class="type__image">
+                        <img src={% static "img/index/soft.png" %} alt="soft">
+                    </div>
+                    <div class="type__text">
+                        <div class="price__heading">Навесы из мягкой кровли</div>
+                        <div class="price__name">Стоимость монтажа:</div>
+                        <p class="price__value">от <span>1200</span> руб/м²</p>
+                        <div class="price__name">Стоимость под ключ:</div>
+                        <p class="price__value">от <span>3200</span> руб/м²</p>
                     </div>
                     <button href="#" class="form__active btn btn_blue btn__card">Подробнее</button>
                 </div>
